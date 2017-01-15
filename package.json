@@ -5,7 +5,7 @@
     "prebuild": "npm run render",
     "render": "node src/server-render.js",
     "watch:js": "onchange lib/**/*.es6 -- npm run build",
-    "watch:scss": "onchange lib/**/*.es6 -- npm run build",
+    "watch:scss": "onchange lib/**/*.scss -- npm run build",
     "watch": "npm run watch:js & npm run watch:scss",
     "develop": "lite-server & npm run watch"
   },
@@ -15,15 +15,17 @@
   },
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
+    "babel-plugin-transform-object-assign": "^6.8.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
-    "babel-plugin-transform-object-assign": "^6.8.0",
     "babelify": "^7.3.0",
     "browserify": "^13.3.0",
     "browserify-shim": "^3.8.12",

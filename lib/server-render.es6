@@ -2,8 +2,9 @@ import fs from 'fs';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import App from './app';
+import store from './store';
 var AppFactory = React.createFactory(App)
-var appHtml = ReactDOMServer.renderToString(AppFactory());
+var appHtml = ReactDOMServer.renderToString(AppFactory({items: store.getState()}));
 fs.readFile('index.html', 'utf8', function (err,data) {
   if (err) {
     return console.log(err);
