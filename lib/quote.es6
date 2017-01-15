@@ -33,7 +33,7 @@ export default class Quote extends React.Component {
     let items = this.state.items;
     return(
       <div>
-        <button onClick={this.handleClick} disabled={this.disabled}>Add item!!\</button>
+        <button onClick={this.handleClick} disabled={this.disabled}>Add item!!!</button>
         <ul>
           {items.map((item, i) => <li key={i}>{item}</li>)}
         </ul>
