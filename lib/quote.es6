@@ -6,7 +6,8 @@ export default class Quote extends React.Component {
   // component has fully mounted on the DOM
   constructor(props) {
     super(props);
-
+    let data1 = {d: 1};
+    let data = Object.assign({}, data1);
     this.state = {
       items: [],
       disabled: true
@@ -32,7 +33,7 @@ export default class Quote extends React.Component {
     let items = this.state.items;
     return(
       <div>
-        <button onClick={this.handleClick} disabled={this.disabled}>Add item!!</button>
+        <button onClick={this.handleClick} disabled={this.disabled}>Add item!!\</button>
         <ul>
           {items.map((item, i) => <li key={i}>{item}</li>)}
         </ul>
