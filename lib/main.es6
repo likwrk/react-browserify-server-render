@@ -8,3 +8,4 @@ const render = () => {
 	ReactDOM.render(<App items={store.getState()}></App>, document.getElementById('react-app'));
 }
 store.subscribe(render);
+render();

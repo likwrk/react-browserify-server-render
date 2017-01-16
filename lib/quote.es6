@@ -17,6 +17,10 @@ export default class Quote extends React.Component {
 		})
 	}
 
+	componentDidMount() {
+		console.log('component mounted');
+	}
+
 	handleKeyup(e, i) {
 		switch (e.keyCode) {
 			case 13:
